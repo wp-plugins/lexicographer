@@ -11,6 +11,8 @@ Lexicographer creates an alphabetical index of your blog, using keywords you spe
 
 == Description ==
 
+Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page or post.
+
 I wrote this plugin because I like to invent words and define them on my blog, thereby creating a dictionary distributed over several posts. Not only was there no list of all the words available, it was also that Google wouldn't find the words because it couldn't deal with the stress marks I put in there, dictionary-style. Lexicographer solves both of these problems.
 
 == Usage ==
