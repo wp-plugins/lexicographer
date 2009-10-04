@@ -1,7 +1,6 @@
 === Lexicographer ===
 
 Contributors: texttheater
-Donate link: http://texttheater.de
 Tags: index, dictionary, words, lemmas, glossary
 Requires at least: 2.8.4
 Tested up to: 2.8.4
