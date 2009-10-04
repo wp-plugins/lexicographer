@@ -26,6 +26,13 @@ At this place, the index will be inserted. It will consist of the defined terms,
 
 == Installation ==
 
+Either:
+
+1. Search for and install Lexicographer directly through the 'Plugins' menu in WordPress
+
+Or:
+
+1. Download and unzip Lexicographer
 1. Upload the `lexicographer` directory to the `/wp-content/plugins` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
