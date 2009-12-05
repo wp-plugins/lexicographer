@@ -16,7 +16,7 @@ I wrote this plugin because I like to invent words and define them on my blog, t
 
 == Usage ==
 
-In your posts and pages, put the words and terms to index in spans of class `lemma`, like so: `<span class="lemma">ˌsu·per·ca·liˌfra·gi·lis·ticˌex·pi·a·liˈdocious</span>` (the stress and hyphenation marks are of course optional).
+In your posts and pages, put the words and terms to index in spans of class `lemma`, like so: `<span class="lemma">ˌsu·per·ca·liˌfra·gi·lis·ticˌex·pi·a·liˈdo·cious</span>` (the stress and hyphenation marks are of course optional).
 
 In the page (or post) where you'd like the index to live, make sure the HTML contains the following exact string:
 
