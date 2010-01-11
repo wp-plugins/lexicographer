@@ -285,9 +285,12 @@ function lexicographer_the_content($content) {
 
            if (!empty($rows)) {
                $index .= "<h3>$section</h3><ul>";
+               $home = get_option('home');
 
                foreach($rows as $row) {
                    $index .= "<li><a href=\"";
+                   $index .= get_bloginfo('url');
+                   $index .= '/';
                    $index .= get_page_uri($row->lemma_post_ID);
                    $index .= '#';
                    $index .= lexicographer_anchornamify($row->lemma_content);
