@@ -237,6 +237,14 @@ function lexicographer_uninstall() {
     }
 }
 
+function lexicographer_transition_post_status($new_status, $old_status, $post) {
+    if ($new_status == 'publish') {
+        lexicographer_publish($post->ID);
+    } else {
+        lexicographer_unpublish($post->ID);
+    }
+}
+
 function lexicographer_publish($post_ID) {
     global $wpdb;
     $post = get_post($post_ID);
@@ -270,6 +278,12 @@ function lexicographer_publish($post_ID) {
     }
 }
 
+function lexicographer_unpublish($post_ID) {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'lexicographer';
+    $wpdb->query("DELETE FROM $table_name WHERE lemma_post_ID = $post_ID");
+}
+
 function lexicographer_the_content($content) {
    global $wpdb;
    $table_name = $wpdb->prefix . 'lexicographer';
@@ -285,6 +299,7 @@ function lexicographer_the_content($content) {
 
            if (!empty($rows)) {
                $index .= "<h3>$section</h3><ul>";
+               $home = get_option('home');
 
                foreach($rows as $row) {
                    $index .= "<li><a href=\"";
