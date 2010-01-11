@@ -285,7 +285,6 @@ function lexicographer_the_content($content) {
 
            if (!empty($rows)) {
                $index .= "<h3>$section</h3><ul>";
-               $home = get_option('home');
 
                foreach($rows as $row) {
                    $index .= "<li><a href=\"";
