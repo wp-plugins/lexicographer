@@ -6,11 +6,11 @@ Requires at least: 2.8.4
 Tested up to: 3.3
 Stable tag: trunk
 
-Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page or post.
+Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page, post or text widget.
 
 == Description ==
 
-Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page or post. Here's what such an index looks like: http://texttheater.net/woerterverzeichnis
+Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page, post or text widget. Here's what such an index looks like: http://texttheater.net/woerterverzeichnis
 
 I wrote this plugin because I like to invent words and define them on my blog, thereby creating a dictionary distributed over several posts. Not only was there no list of all the words available, it was also that Google wouldn't find the words because it couldn't deal with the stress marks I put in there, dictionary-style. Lexicographer solves both of these problems. 
 
@@ -18,7 +18,7 @@ I wrote this plugin because I like to invent words and define them on my blog, t
 
 In your posts and pages, put the words and terms to index in spans of class `lemma`, like so: `<span class="lemma">ˌsu·per·ca·liˌfra·gi·lis·ticˌex·pi·a·liˈdo·cious</span>` (the stress and hyphenation marks are of course optional).
 
-In the page (or post) where you'd like the index to live, make sure the HTML contains the following exact string:
+In the page (or post, or text widget) where you'd like the index to live, make sure the HTML contains the following exact string:
 
     <p>{{Lexicographer index}}</p>
 
@@ -38,4 +38,4 @@ Or:
 
 == Support ==
 
-If you have questions or suggestions, contact me at strompost ät texttheater döt de.
+If you have questions or suggestions, contact me at strompost ät texttheater döt net.

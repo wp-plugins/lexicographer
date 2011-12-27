@@ -3,7 +3,7 @@
 /*******************************************************************************
 
     File: lib.php
-    Copyright (C) 2009 Kilian Evang
+    Copyright (C) 2009-2011 Kilian Evang
 
     This file is part of Lexicographer.
 
@@ -285,6 +285,14 @@ function lexicographer_unpublish($post_ID) {
 }
 
 function lexicographer_the_content($content) {
+	return lexicographer_insert_index($content, 3);
+}
+
+function lexicographer_widget_text($content) {
+	return lexicographer_insert_index($content, 4);
+}
+
+function lexicographer_insert_index($content, $heading_level) {
    global $wpdb;
    $table_name = $wpdb->prefix . 'lexicographer';
 
@@ -298,7 +306,8 @@ function lexicographer_the_content($content) {
                                        ORDER BY lemma_content_sorted ASC");
 
            if (!empty($rows)) {
-               $index .= "<h3>$section</h3><ul>";
+               $index .= sprintf("<h%d>$section</h%d><ul>", $heading_level,
+                       $heading_level);
                $home = get_option('home');
 
                foreach($rows as $row) {
