@@ -3,14 +3,14 @@
 Contributors: texttheater
 Tags: index, dictionary, words, lemmas, glossary
 Requires at least: 2.8.4
-Tested up to: 3.0
+Tested up to: 3.3
 Stable tag: trunk
 
 Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page or post.
 
 == Description ==
 
-Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page or post. Here's what such an index looks like: http://log.texttheater.de/woerterverzeichnis
+Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page or post. Here's what such an index looks like: http://texttheater.net/woerterverzeichnis
 
 I wrote this plugin because I like to invent words and define them on my blog, thereby creating a dictionary distributed over several posts. Not only was there no list of all the words available, it was also that Google wouldn't find the words because it couldn't deal with the stress marks I put in there, dictionary-style. Lexicographer solves both of these problems. 
 
