@@ -38,4 +38,4 @@ Or:
 
 == Support ==
 
-If you have questions or suggestions, contact me at strompost ät texttheater döt net.
+If you have questions or suggestions, contact me at poststelle ät texttheater döt net.
