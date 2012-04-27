@@ -3,7 +3,7 @@
 /*******************************************************************************
 
     File: lib.php
-    Copyright (C) 2009-2011 Kilian Evang
+    Copyright (C) 2009-2012 Kilian Evang
 
     This file is part of Lexicographer.
 
@@ -217,7 +217,7 @@ function lexicographer_install() {
                   PRIMARY KEY  (lemma_ID),
                   KEY lemma_post_ID (lemma_post_ID),
                   KEY lemma_section (lemma_section)
-                  );");
+                  ) CHARSET " . DB_CHARSET . ";");
     $table_name = $wpdb->prefix . 'posts';
     $posts = $wpdb->get_results("SELECT ID FROM $table_name
                                  WHERE post_type = 'page'
