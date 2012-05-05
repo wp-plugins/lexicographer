@@ -36,6 +36,31 @@ Or:
 1. Upload the `lexicographer` directory to the `/wp-content/plugins` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
+== Changelog ==
+
+=== 0.4 ===
+
+* Now observing DB_CHARSET for creating the databse table. This fixes a problem where non-ASCII characters get replaced by question marks when inserting into the table via an UTF-8 connection.
+* Tested with WordPress 3.3.2.
+* Updated documentation.
+
+=== 0.3 ===
+
+* Index can now be inserted in widgets.
+* Tested with WordPress 3.3.
+* Updated documentation.
+
+=== 0.2 ===
+
+* Lemmas are now removed from the index when the post/page containing them is deleted or otherwise unpublished.
+* The index now uses absolute links.
+* Tested with WordPress 2.9.1.
+* Updated documentation.
+
+=== 0.1 ===
+
+* Initial release.
+
 == Support ==
 
 If you have questions or suggestions, contact me at poststelle ät texttheater döt net.

@@ -214,7 +214,7 @@ function lexicographer_install() {
                   lemma_content tinytext NOT NULL,
                   lemma_content_sorted tinytext NOT NULL,
                   lemma_section char(1) NOT NULL,
-                  PRIMARY KEY  (lemma_ID),
+                  PRIMARY KEY (lemma_ID),
                   KEY lemma_post_ID (lemma_post_ID),
                   KEY lemma_section (lemma_section)
                   ) CHARSET " . DB_CHARSET . ";");
