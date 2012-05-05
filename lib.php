@@ -839,9 +839,7 @@ function lexicographer_insert_index($content, $heading_level) {
 
                foreach($rows as $row) {
                    $index .= "<li><a href=\"";
-                   $index .= get_bloginfo('url');
-                   $index .= '/';
-                   $index .= get_page_uri($row->lemma_post_ID);
+                   $index .= get_page_link($row->lemma_post_ID);
                    $index .= '#';
                    $index .= lexicographer_anchornamify($row->lemma_content);
                    $index .= "\">";
