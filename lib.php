@@ -27,7 +27,23 @@
     Data
 ==============================================================================*/
 
-function lexicographer_show_table() {
+function lexicographer_presentation_table() {
+    static $result;
+
+    if (!isset($result)) {
+        $result = array(
+                'Ä' => 'Ae',
+                'ä' => 'ae',
+                'Ö' => 'Oe',
+                'ö' => 'oe',
+                'Ü' => 'Ue',
+                'ü' => 'ue');
+    }
+
+    return $result;
+}
+
+function lexicographer_sort_table() {
     static $result;
 
     if (!isset($result)) {
@@ -37,9 +53,9 @@ function lexicographer_show_table() {
                 'Á' => 'A',
                 'Â' => 'A',
                 'Ã' => 'A',
-                'Ä' => 'Ae',
+                'Ä' => 'A',
                 'Å' => 'A',
-                'Æ' => 'A',
+                'Æ' => 'AE',
                 'Ç' => 'C',
                 'È' => 'E',
                 'É' => 'E',
@@ -49,26 +65,26 @@ function lexicographer_show_table() {
                 'Í' => 'I',
                 'Î' => 'I',
                 'Ï' => 'I',
-                'Ð' => 'Dh',
+                'Ð' => 'Dh', // usage-oriented transliteration
                 'Ñ' => 'N',
                 'Ò' => 'O',
                 'Ó' => 'O',
                 'Ô' => 'O',
                 'Õ' => 'O',
-                'Ö' => 'Oe',
+                'Ö' => 'O',
                 'Ø' => 'O',
                 'Ù' => 'U',
                 'Ú' => 'U',
                 'Û' => 'U',
-                'Ü' => 'Ue',
+                'Ü' => 'U',
                 'Ý' => 'Y',
-                'Þ' => 'Th',
-                'ß' => 'ss',
+                'Þ' => 'Th', // usage-oriented transliteration
+                'ß' => 'ss', // usage-oriented transliteration
                 'à' => 'a',
                 'á' => 'a',
                 'â' => 'a',
                 'ã' => 'a',
-                'ä' => 'ae',
+                'ä' => 'a',
                 'å' => 'a',
                 'æ' => 'ae',
                 'ç' => 'c',
@@ -80,20 +96,20 @@ function lexicographer_show_table() {
                 'í' => 'i',
                 'î' => 'i',
                 'ï' => 'i',
-                'ð' => 'th',
+                'ð' => 'dh', // usage-oriented transliteration
                 'ñ' => 'n',
                 'ò' => 'o',
                 'ó' => 'o',
                 'ô' => 'o',
                 'õ' => 'o',
-                'ö' => 'oe',
+                'ö' => 'o',
                 'ø' => 'o',
                 'ù' => 'u',
                 'ú' => 'u',
                 'û' => 'u',
-                'ü' => 'ue',
+                'ü' => 'u',
                 'ý' => 'y',
-                'þ' => 'dh',
+                'þ' => 'th', // usage-oriented transliteration
                 'ÿ' => 'y',
                 // Latin Extended-A
                 'Ā' => 'A',
@@ -238,21 +254,21 @@ function lexicographer_show_table() {
                 'Ɗ' => 'D',
                 'Ƌ' => 'D',
                 'ƌ' => 'd',
-                'ƍ' => 'd',
+                'ƍ' => 'd', // usage-oriented transliteration
                 'Ǝ' => 'E',
                 'Ə' => 'E',
                 'Ɛ' => 'E',
                 'Ƒ' => 'F',
                 'ƒ' => 'f',
                 'Ɠ' => 'G',
-                'Ɣ' => 'G',
+                'Ɣ' => 'G', // usage-oriented transliteration
                 'ƕ' => 'hv',
                 'Ɩ' => 'I',
                 'Ɨ' => 'I',
                 'Ƙ' => 'K',
                 'ƙ' => 'k',
                 'ƚ' => 'l',
-                'ƛ' => 'l',
+                'ƛ' => 'l', // usage-oriented transliteration
                 'Ɯ' => 'M',
                 'Ɲ' => 'N',
                 'ƞ' => 'n',
@@ -280,10 +296,10 @@ function lexicographer_show_table() {
                 'ƴ' => 'y',
                 'Ƶ' => 'Z',
                 'ƶ' => 'z',
-                'Ʒ' => 'Z',
-                'Ƹ' => 'Z',
-                'ƹ' => 'z',
-                'ƺ' => 'z',
+                //'Ʒ' => '',
+                //'Ƹ' => '',
+                //'ƹ' => '',
+                //'ƺ' => '',
                 'ƻ' => '2',
                 'Ƽ' => '5',
                 'ƽ' => '5',
@@ -318,7 +334,7 @@ function lexicographer_show_table() {
                 'ǚ' => 'u',
                 'Ǜ' => 'U',
                 'ǜ' => 'u',
-                'ǝ' => 'e',
+                'ǝ' => 'e', // usage-oriented transliteration
                 'Ǟ' => 'A',
                 'ǟ' => 'a',
                 'Ǡ' => 'A',
@@ -387,8 +403,8 @@ function lexicographer_show_table() {
                 'ȟ' => 'h',
                 'Ƞ' => 'N',
                 'ȡ' => 'd',
-                'Ȣ' => 'Ou',
-                'ȣ' => 'ou',
+                'Ȣ' => 'Ou', // usage-oriented transliteration
+                'ȣ' => 'ou', // usage-oriented transliteration
                 'Ȥ' => 'Z',
                 'ȥ' => 'z',
                 'Ȧ' => 'A',
@@ -592,8 +608,8 @@ function lexicographer_show_table() {
                 'ẛ' => 's',
                 'ẜ' => 's',
                 'ẝ' => 's',
-                'ẞ' => 'SS',
-                'ẟ' => 'd',
+                'ẞ' => 'SS', // usage-oriented transliteration
+                'ẟ' => 'd', // usage-oriented transliteration
                 'Ạ' => 'A',
                 'ạ' => 'a',
                 'Ả' => 'A',
@@ -691,79 +707,6 @@ function lexicographer_show_table() {
                 'Ỿ' => 'Y',
                 'ỿ' => 'y',
                 );
-    }
-
-    return $result;
-}
-
-function lexicographer_sort_table() {
-    static $result;
-
-    if (!isset($result)) {
-        $result = array(
-                // Latin-1 Supplement
-                'À' => 'A',
-                'Á' => 'A',
-                'Â' => 'A',
-                'Ã' => 'A',
-                'Ä' => 'A',
-                'Å' => 'A',
-                'Æ' => 'A',
-                'Ç' => 'C',
-                'È' => 'E',
-                'É' => 'E',
-                'Ê' => 'E',
-                'Ë' => 'E',
-                'Ì' => 'I',
-                'Í' => 'I',
-                'Î' => 'I',
-                'Ï' => 'I',
-                'Ð' => 'Dh',
-                'Ñ' => 'N',
-                'Ò' => 'O',
-                'Ó' => 'O',
-                'Ô' => 'O',
-                'Õ' => 'O',
-                'Ö' => 'O',
-                'Ø' => 'O',
-                'Ù' => 'U',
-                'Ú' => 'U',
-                'Û' => 'U',
-                'Ü' => 'U',
-                'Ý' => 'Y',
-                'Þ' => 'Th',
-                'ß' => 'ss',
-                'à' => 'a',
-                'á' => 'a',
-                'â' => 'a',
-                'ã' => 'a',
-                'ä' => 'a',
-                'å' => 'a',
-                'æ' => 'ae',
-                'ç' => 'c',
-                'è' => 'e',
-                'é' => 'e',
-                'ê' => 'e',
-                'ë' => 'e',
-                'ì' => 'i',
-                'í' => 'i',
-                'î' => 'i',
-                'ï' => 'i',
-                'ð' => 'th',
-                'ñ' => 'n',
-                'ò' => 'o',
-                'ó' => 'o',
-                'ô' => 'o',
-                'õ' => 'o',
-                'ö' => 'o',
-                'ø' => 'o',
-                'ù' => 'u',
-                'ú' => 'u',
-                'û' => 'u',
-                'ü' => 'u',
-                'ý' => 'y',
-                'þ' => 'dh',
-                'ÿ' => 'y');
     }
 
     return $result;
@@ -953,7 +896,8 @@ function lexicographer_multireplace($string, $array) {
 }
 
 function lexicographer_showify($string) {
-    return lexicographer_multireplace($string, lexicographer_show_table());
+    return lexicographer_multireplace(lexicographer_multireplace($string,
+            lexicographer_presentation_table()), lexicographer_sort_table());
 }
 
 function lexicographer_sortify($string) {

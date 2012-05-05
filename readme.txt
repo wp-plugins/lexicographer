@@ -38,6 +38,12 @@ Or:
 
 == Changelog ==
 
+=== 0.5 ===
+
+* Transliteration of lemmas to ASCII both for creating anchor names and for sorting now uses the same transliteration table. The characters ÄäÖöÜü (graphemes corresponding to German umlauts) still receive special treatment in that they are expanded à la ä → ae for anchor names (but not for sorting), but this is now done as a preprocessing step.
+
+* The transliteration table now covers almost every latin-derived letter in the Unicode blocks Latin-1 Supplement, Latin Extended-A, Latin Extended-B and Latin Extended Additional. Most transliterations are "glyph-oriented" in that they involve only removing diacritic marks, decomposing ligatures and rotating letters back. A few transliterations are more "usage-oriented", such as ß → ss, þ → th or Ɣ → g. Some effort was made to keep the transliteration table sane, consistent and language-neutral. Missing letters are indicated in comments. Suggestions for additions and improvement are more than welcome!
+
 === 0.4 ===
 
 * Now observing DB_CHARSET for creating the databse table. This fixes a problem where non-ASCII characters get replaced by question marks when inserting into the table via an UTF-8 connection.
