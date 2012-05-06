@@ -1,5 +1,7 @@
 === Lexicographer ===
 
+
+
 Contributors: texttheater
 Tags: index, dictionary, words, lemmas, glossary
 Requires at least: 2.8.4
@@ -8,11 +10,15 @@ Stable tag: trunk
 
 Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page, post or text widget.
 
+
+
 == Description ==
 
 Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page, post or text widget. Here's what such an index looks like: http://texttheater.net/woerterverzeichnis
 
 I wrote this plugin because I like to invent words and define them on my blog, thereby creating a dictionary distributed over several posts. Not only was there no list of all the words available, it was also that Google wouldn't find the words because it couldn't deal with the stress marks I put in there, dictionary-style. Lexicographer solves both of these problems. 
+
+
 
 == Usage ==
 
@@ -23,6 +29,8 @@ In the page (or post, or text widget) where you'd like the index to live, make s
     <p>{{Lexicographer index}}</p>
 
 At this place, the index will be inserted. It will consist of the defined terms, linking to the definitions.
+
+
 
 == Installation ==
 
@@ -35,6 +43,14 @@ Or:
 1. Download and unzip Lexicographer
 1. Upload the `lexicographer` directory to the `/wp-content/plugins` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+
+
+
+== Support ==
+
+If you have questions or suggestions, contact me at poststelle ät texttheater döt net.
+
+
 
 == Changelog ==
 
@@ -67,7 +83,3 @@ Or:
 = 0.1 =
 
 * Initial release.
-
-== Support ==
-
-If you have questions or suggestions, contact me at poststelle ät texttheater döt net.
