@@ -63,7 +63,7 @@ If you have questions or suggestions, contact me at poststelle ät texttheater d
 
 = 0.4 =
 
-* Now observing DB_CHARSET for creating the databse table. This fixes a problem where non-ASCII characters get replaced by question marks when inserting into the table via an UTF-8 connection.
+* Now observing DB_CHARSET for creating the database table. This fixes a problem where non-ASCII characters get replaced by question marks when inserting into the table via a UTF-8 connection.
 * Tested with WordPress 3.3.2.
 * Updated documentation.
 
