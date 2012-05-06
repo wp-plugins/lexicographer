@@ -747,8 +747,9 @@ function lexicographer_install() {
                   ) CHARSET " . DB_CHARSET . ";");
     $table_name = $wpdb->prefix . 'posts';
     $posts = $wpdb->get_results("SELECT ID FROM $table_name
-                                 WHERE post_type = 'page'
-                                 OR post_type = 'post'");
+                                 WHERE (post_type = 'page'
+                                 OR post_type = 'post')
+                                 AND post_status = 'publish'");
 
     foreach($posts as $post) {
         lexicographer_publish($post->ID);
