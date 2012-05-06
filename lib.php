@@ -279,11 +279,11 @@ function lexicographer_sort_table() {
                 'ƣ' => 'oi',
                 'Ƥ' => 'P',
                 'ƥ' => 'p',
-                //'Ʀ' => '',
-                'Ƨ' => '2',
-                'ƨ' => '2',
-                //'Ʃ' => '',
-                //'ƪ' => '',
+                'Ʀ' => 'R',
+                'Ƨ' => '2', // usage-oriented transliteration
+                'ƨ' => '2', // usage-oriented transliteration
+                'Ʃ' => 'S', // usage-oriented transliteration
+                'ƪ' => 's', // usage-oriented transliteration
                 'ƫ' => 't',
                 'Ƭ' => 'T',
                 'ƭ' => 't',
@@ -296,10 +296,10 @@ function lexicographer_sort_table() {
                 'ƴ' => 'y',
                 'Ƶ' => 'Z',
                 'ƶ' => 'z',
-                //'Ʒ' => '',
-                //'Ƹ' => '',
-                //'ƹ' => '',
-                //'ƺ' => '',
+                'Ʒ' => 'Z',
+                'Ƹ' => 'Z',
+                'ƹ' => 'z',
+                'ƺ' => 'z',
                 'ƻ' => '2',
                 'Ƽ' => '5',
                 'ƽ' => '5',
@@ -397,8 +397,8 @@ function lexicographer_sort_table() {
                 'ș' => 's',
                 'Ț' => 'T',
                 'ț' => 't',
-                //'Ȝ' => '',
-                //'ȝ' => '',
+                'Ȝ' => 'G',
+                'ȝ' => 'g',
                 'Ȟ' => 'H',
                 'ȟ' => 'h',
                 'Ƞ' => 'N',
@@ -887,7 +887,7 @@ function lexicographer_insert_anchor($groups) {
 }
 
 function lexicographer_multireplace($string, $array) {
-    foreach ($array as $from => $to) {
+    foreach ($array as $from => $to) { // TODO this is inefficient!
         $string = str_replace($from, $to, $string);
     }
 
