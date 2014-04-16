@@ -5,7 +5,7 @@
 Contributors: texttheater
 Tags: index, dictionary, words, lemmas, glossary
 Requires at least: 2.8.4
-Tested up to: 3.3.2
+Tested up to: 3.9
 Stable tag: trunk
 
 Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page, post or text widget.
