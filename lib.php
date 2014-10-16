@@ -153,7 +153,8 @@ function lexicographer_insert_index($content, $heading_level) {
                                        ORDER BY lemma_content_sorted ASC");
 
            if (!empty($rows)) {
-               $index .= sprintf("<h%d>$section</h%d><ul>", $heading_level,
+               $index .= "<div class=\"lexicographer-index-section\">\n";
+               $index .= sprintf("<h%d>$section</h%d>\n<ul>\n", $heading_level,
                        $heading_level);
                $home = get_option('home');
 
@@ -164,10 +165,11 @@ function lexicographer_insert_index($content, $heading_level) {
                    $index .= lexicographer_anchornamify($row->lemma_content);
                    $index .= "\">";
                    $index .= $row->lemma_content;
-                   $index .= "</a></li>";
+                   $index .= "</a></li>\n";
                }
 
-               $index .= "</ul>";
+               $index .= "</ul>\n";
+               $index .= "</div>\n";
            }
        }
 
