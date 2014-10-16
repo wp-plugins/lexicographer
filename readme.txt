@@ -20,18 +20,6 @@ I wrote this plugin because I like to invent words and define them on my blog, t
 
 
 
-== Usage ==
-
-In your posts and pages, put the words and terms to index in spans of class `lemma`, like so: `<span class="lemma">ˌsu·per·ca·liˌfra·gi·lis·ticˌex·pi·a·liˈdo·cious</span>` (the stress and hyphenation marks are of course optional).
-
-In the page (or post, or text widget) where you'd like the index to live, make sure the HTML contains the following exact string:
-
-    <p>{{Lexicographer index}}</p>
-
-At this place, the index will be inserted. It will consist of the defined terms, linking to the definitions.
-
-
-
 == Installation ==
 
 Either:
@@ -44,6 +32,22 @@ Or:
 1. Upload the `lexicographer` directory to the `/wp-content/plugins` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
+See Other Notes (https://wordpress.org/plugins/lexicographer/other_notes/) for how to use Lexicographer.
+
+
+
+== Usage ==
+
+Lexicographer does not add any new elements to the WordPress admin interface. Instead, you use it as follows:
+
+In your posts and pages, put the words and terms to index in spans of class `lemma`, like so: `<span class="lemma">ˌsu·per·ca·liˌfra·gi·lis·ticˌex·pi·a·liˈdo·cious</span>` (the stress and hyphenation marks are of course optional).
+
+In the page (or post, or text widget) where you'd like the index to live, make sure the HTML contains the following exact string:
+
+    <p>{{Lexicographer index}}</p>
+
+At this place, the index will be inserted. It will consist of the defined terms, linking to the definitions.
+
 
 
 == Support ==
@@ -53,6 +57,14 @@ If you have questions or suggestions, contact me at poststelle ät texttheater d
 
 
 == Changelog ==
+
+= 0.7 =
+
+* The individual index sections are now put into divs of class lexicographer-index-section for the benefit of those who want to style and/or script the index.
+
+= 0.6. =
+
+* The index is now put into a div of class lexicographer-index for the benefit of those who want to style and/or script the index.
 
 = 0.5 =
 
