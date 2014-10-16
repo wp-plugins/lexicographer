@@ -3,7 +3,7 @@
 /*******************************************************************************
 
     File: lib.php
-    Copyright (C) 2009-2012 Kilian Evang
+    Copyright (C) 2009-2014 Kilian Evang
 
     This file is part of Lexicographer.
 
@@ -142,6 +142,8 @@ function lexicographer_insert_index($content, $heading_level) {
    $table_name = $wpdb->prefix . 'lexicographer';
 
    if (strpos($content, '<p>{{Lexicographer index}}</p>') >= 0) {
+       $index = "<div class=\"lexicographer-index\">\n";
+
        foreach (array('*', '#', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                       'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
                       'U', 'V', 'W', 'X', 'Y', 'Z') as $section) {
@@ -168,7 +170,8 @@ function lexicographer_insert_index($content, $heading_level) {
                $index .= "</ul>";
            }
        }
-   
+
+       $index .= "</div>";
        $content = str_replace('<p>{{Lexicographer index}}</p>', $index,
                $content);
    }

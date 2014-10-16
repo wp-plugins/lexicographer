@@ -4,7 +4,7 @@
 Plugin Name: Lexicographer
 Plugin URI: http://wordpress.org/extend/plugins/lexicographer/
 Description: Lexicographer creates an alphabetical index of your blog, using keywords you specify. The index can be included in any page, post or widget.
-Version: 0.5
+Version: 0.6
 Author: Kilian Evang
 Author URI: http://texttheater.net
 */
@@ -12,7 +12,7 @@ Author URI: http://texttheater.net
 /*******************************************************************************
 
     File: lexicographer.php
-    Copyright (C) 2009-2012 Kilian Evang
+    Copyright (C) 2009-2014 Kilian Evang
 
     This file is part of Lexicographer.
 
